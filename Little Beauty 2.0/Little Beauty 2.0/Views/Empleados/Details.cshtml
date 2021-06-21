@@ -1,0 +1,102 @@
+﻿@model Little_Beauty_2._0.Models.Empleados
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container body-content">
+    <h2 class="text-center" style="color:pink">Details</h2>
+
+    <div>
+        <h4 class="text-center">Empleados</h4>
+        <hr />
+        <div class="col-lg-offset-4 col-md-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.nombre_empleado)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.nombre_empleado)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.direccion)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.direccion)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.apellido_empleado)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.apellido_empleado)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.telefono)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.telefono)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.rol)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.rol)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.password)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.password)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Entidades.nombre_entidad)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Entidades.nombre_entidad)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Municipios.nombre_municipio)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Municipios.nombre_municipio)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Paises.nombre_pais)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Paises.nombre_pais)
+                </dd>
+
+            </dl>
+            <p class="text-center"> 
+                @Html.ActionLink("Edit", "Edit", new { id = Model.id_empleado }) |
+                @Html.ActionLink("Ir a la lista", "Index")
+            </p>
+        </div>
+    </div>
+</div>

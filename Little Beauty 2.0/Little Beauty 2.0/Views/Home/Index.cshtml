@@ -1,0 +1,130 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active ">
+            <img src="~/Content/img/carrousel2.png" width="1900px" height="300px">
+        </div>
+
+
+
+        <div class="item">
+            <img src="~/Content/img/carrousel1.png" width="1900px" height="300px">
+        </div>
+
+
+
+        <div class="item">
+            <img src="~/Content/img/Sailboats and Skyscrapers Twitter Header.png" width="1900px" height="300px">
+        </div>
+    </div>
+
+
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="container body-content">
+    <h1> </h1>
+    <div class="col-md-12">
+        <div class="row">
+            <h1 style="color:pink" class="text-center"><b>Conoce nuestros favoritos ♡</b></h1>
+        </div>
+    </div>
+    <div class="col-md-4 text-center">
+        <img src="~/Content/img/delineadorplumin.jpg" height="200px" width="200px">
+        <h5>Delineador/Plumin</h5>
+        <h5>$130</h5>
+        <a href="@Url.Action("Agregar","Carro",new { id= 2})">
+        <button class="btn btn-default" style="background-color:palevioletred">Añadir al carrito</button></a>
+    </div>
+    <div class="col-md-4 text-center">
+        <img src="~/Content/img/crema para manos.jpg" height="200px" width="200px">
+        <h5>Crema para manos</h5>
+        <h5>$50</h5>
+        <a href="@Url.Action("Agregar","Carro",new { id= 3})">
+            <button class="btn btn-default" style="background-color:palevioletred">Añadir al carrito</button>
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <img src="~/Content/img/naked2.jpg" height="200px" width="200px">
+        <h5>Paleta Naked 3</h5>
+        <h5>$1100</h5>
+        <a href="@Url.Action("Agregar","Carro",new { id = 4 })">
+            <button class="btn btn-default" style="background-color:palevioletred">Añadir al carrito</button>
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <img src="~/Content/img/esmalte.jpg" height="200px" width="200px">
+        <h5>Esmalte secado rápido</h5>
+        <h5>$30</h5>
+        <a href="@Url.Action("Agregar","Carro",new { id= 5})">
+            <button class="btn btn-default" style="background-color:palevioletred">Añadir al carrito</button>
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <img src="~/Content/img/shampoo alaciador.jpg" height="200px" width="200px">
+        <h5>Shampoo Alaciador</h5>
+        <h5>$154</h5>
+        <a href="@Url.Action("Agregar","Carro",new { id= 7})">
+            <button class="btn btn-default" style="background-color:palevioletred">Añadir al carrito</button>
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <img src="~/Content/img/parches de hidrogel.jpg" height="200px" width="200px">
+        <h5>Parches de hidrogel para los ojos</h5>
+        <h5>$330</h5>
+        <a href="@Url.Action("Agregar","Carro",new { id= 6})">
+            <button class="btn btn-default" style="background-color:palevioletred">Añadir al carrito</button>
+        </a>
+    </div>
+
+
+
+</div>
+
+
+
+<hr />
+<div class="row">
+    <h1 style="color:pink" class="text-center"><b>Categorías☆</b></h1>
+</div>
+<div class="col-md-3 text-center">
+    <a href='@Url.Action("prodCategoria","Catalogo",new {idCat=1})'>
+        <img src="~/Content/img/cabello1.jpg" height="400px" width="400px">
+        <h4 style="color:dimgrey"><b>Cuidado del cabello</b></h4>
+    </a>
+</div>
+<div class="col-md-3 text-center">
+    <a href='@Url.Action("prodCategoria","Catalogo",new {idCat=2})'>
+        <img src="~/Content/img/makeUp (1).jpg" height="400px" width="400px">
+        <h4 style="color:dimgrey"><b>Maquillaje</b></h4>
+    </a>
+</div>
+<div class="col-md-3 text-center">
+    <a href='@Url.Action("prodCategoria","Catalogo",new {idCat=1002})'>
+        <img src="~/Content/img/skincare (1).jpg" height="400px" width="400px">
+        <h4 style="color:dimgrey"><b>Cuidado de la piel</b></h4>
+    </a>
+</div>
+<div class="col-md-3 text-center">
+    <a href='@Url.Action("prodCategoria","Catalogo",new {idCat=1003})'>
+        <img src="~/Content/img/uñas (1).jpg" height="400px" width="400px">
+        <h4 style="color:dimgrey"><b>Uñas</b></h4>
+    </a>
+</div>
+<h1> </h1>
+<img src="~/Content/img/foot.jpg">

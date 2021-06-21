@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Little_Beauty_2._0.Models.Empleados>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container body-content">
+    <h2 class="text-center" style="color:pink">Inicio</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Direccion
+        </th>
+        <th>
+            Apellido
+        </th>
+        <th>
+            Telefono
+        </th>
+        <th>
+            Rol
+        </th>
+        <th>
+            Correo
+        </th>
+        <th>
+            Contraseña
+        </th>
+        <th>
+            Entidad
+        </th>
+        <th>
+            Municipio
+        </th>
+        <th>
+            Pais
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_empleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellido_empleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Entidades.nombre_entidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Municipios.nombre_municipio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Paises.nombre_pais)
+        </td>
+        <td>
+            @Html.ActionLink(" ", "Edit", new { id=item.id_empleado },new { @class = "glyphicon glyphicon-pencil", @style = "color:palevioletred" }) |
+            @Html.ActionLink(" ", "Details", new { id=item.id_empleado }, new { @class = "glyphicon glyphicon-file", @style = "color:palevioletred" }) |
+            @Html.ActionLink(" ", "Delete", new { id=item.id_empleado }, new { @class = "glyphicon glyphicon-trash", @style = "color:palevioletred" })
+        </td>
+    </tr>
+}
+
+</table>
+</div>
