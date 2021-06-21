@@ -1,0 +1,45 @@
+﻿@using Little_Beauty_2._0.Models
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container body-content text-center">
+    <h2>Historial de pedidos</h2>
+
+    <table class="table table-bordered table-responsive table-striped">
+        @{ if (Session["misPedidos"] != null)
+            {
+                foreach (PedidoCliente pedido in (List<PedidoCliente>)Session["misPedidos"])
+                {
+                    int idOrd = pedido.orden.id_orden;
+                    <tr>
+                        <td>Fecha: @pedido.fecha</td>
+                        <td>Envio: @pedido.envio</td>
+                        <td>Entrega: @pedido.status</td>
+                        <td>Cantidad</td>
+                        <td>Precio de venta</td>
+                    </tr>
+                    foreach(ItemPedido item in (List<ItemPedido>)Session["Pedido"])
+                    {
+                        if (item.IdOrd == idOrd)
+                        {
+                            <tr>
+                                <td>@item.product.nombre_producto</td>
+                                <td><img class="img-responsive" src="~/Content/img/@item.product.imagen" width="100px" /> </td>
+                                <td>@item.product.precio_venta</td>
+                                <td>@item.Cantidad</td>
+                                <td>@(item.product.precio_venta * item.Cantidad)</td>
+
+                            </tr>}
+                    }
+                    <tr>
+                        <td align="right" colspan="4">Total</td>
+                        <td>
+                            @pedido.total
+                        </td>
+                    </tr>
+                }
+            }
+        }
+    </table>
+</div>

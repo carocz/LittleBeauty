@@ -1,0 +1,107 @@
+﻿@model Little_Beauty_2._0.Models.Clientes
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Clientes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellido_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellido_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.codigo_postal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codigo_postal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_tarjeta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_tarjeta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Entidades.nombre_entidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Entidades.nombre_entidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Municipios.nombre_municipio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Municipios.nombre_municipio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Paises.nombre_pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paises.nombre_pais)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_cliente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

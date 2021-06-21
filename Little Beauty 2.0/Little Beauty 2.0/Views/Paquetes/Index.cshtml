@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Little_Beauty_2._0.Models.Paquetes>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAlmacen.cshtml";
+}
+<div class="container body-content">
+<h2 class="text-center" style="color:pink">Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre_paquete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RFC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.web)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.direccion)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre_paquete)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RFC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.web)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.direccion)
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "Edit", new { id = item.id_paquete }, new { @class = "glyphicon glyphicon-pencil", @style = "color:palevioletred" }) |
+                    @Html.ActionLink(" ", "Details", new { id = item.id_paquete }, new { @class = "glyphicon glyphicon-file", @style = "color:palevioletred" }) |
+                    @Html.ActionLink(" ", "Delete", new { id = item.id_paquete }, new { @class = "glyphicon glyphicon-trash", @style = "color:palevioletred" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

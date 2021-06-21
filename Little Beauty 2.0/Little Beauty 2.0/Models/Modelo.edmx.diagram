@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7d12b6f2312248ddbd6f1bc09c199bf6" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Apartamentos" Width="1.5" PointX="12.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Categorias" Width="1.5" PointX="15" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Clientes" Width="1.5" PointX="7.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Compra_producto" Width="1.5" PointX="21.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Compras" Width="1.5" PointX="12.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Empleados" Width="1.5" PointX="10.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Entidades" Width="1.5" PointX="3" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Municipios" Width="1.5" PointX="5.25" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Orden_producto" Width="1.5" PointX="21.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Paises" Width="1.5" PointX="0.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Productos" Width="1.5" PointX="19.5" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Proveedores" Width="1.5" PointX="10.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Sub_categorias" Width="1.5" PointX="17.25" PointY="23.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK__Apartamen__id_em__2739D489" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Categoria__id_ap__25518C17" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Productos__id_ap__3B40CD36" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Productos__id_ca__3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Sub_categ__id_ca__282DF8C2" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Clientes__id_ent__2B0A656D" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Clientes__id_mun__2BFE89A6" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Clientes__id_pai__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Compra_pr__id_co__531856C7" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Compra_pr__id_pr__5224328E" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Compras__id_prov__4B7734FF" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Empleados__id_en__2FCF1A8A" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Empleados__id_mu__31B762FC" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Empleados__id_pa__339FAB6E" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Entidades__id_pa__2DE6D218" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Municipio__id_en__2EDAF651" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Proveedor__id_en__30C33EC3" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Proveedor__id_mu__32AB8735" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Orden_pro__id_pr__540C7B00" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Proveedor__id_pa__3493CFA7" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Productos__id_pr__3E1D39E1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Productos__id_su__3D2915A8" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.Orden" Width="1.5" PointX="18" PointY="11.25" />
+        <AssociationConnector Association="Model.FK__Orden__id_client__607251E5" />
+        <AssociationConnector Association="Model.FK__Orden_pro__id_or__55009F39" />
+        <EntityTypeShape EntityType="Model.Paquetes" Width="1.5" PointX="0.75" PointY="1" />
+        <AssociationConnector Association="Model.FK__Orden__id_paquet__6166761E" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
