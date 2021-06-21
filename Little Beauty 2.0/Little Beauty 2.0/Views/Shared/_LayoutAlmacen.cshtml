@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Little Beauty</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
+
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top" style="background-color:pink">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Little Beauty", "Index", "Almacen", new { area = "" }, new { @class = "navbar-brand", style = "color: black" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" aria-expanded="false" style="color:black" href="#" data-toggle="dropdown">Paquetes <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Agregar", "Create", "Paquetes", null, new { id = "add", style = "color: black" })</li>
+                            <li>@Html.ActionLink("Ver Todas", "Index", "Paquetes", null, new { id = "list", style = "color: black" })</li>
+                        </ul>
+                    </li>
+      
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" aria-expanded="false" style="color:black" href="#" data-toggle="dropdown">Ordenes pendientes<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Fecha de envio", "Index", "Orden", null, new { id = "add", style = "color: black" })</li>
+                            <li>@Html.ActionLink("Fecha de entrega", "Index1", "Orden", null, new { id = "list", style = "color: black" })</li>
+                        </ul>
+                    </li>
+                    <li>
+                        @using (Html.BeginForm("BuscaProd", "Catalogo", FormMethod.Post, new { @class = "form-inline" }))
+                        {
+                            <input class="form-control mr-sm-2" type="text" id="nomBuscar" name="nomBuscar" placeholder="Buscar" />
+                            <button class="btn btn-default" style="border-color:pink;background-color:pink" type="submit" value="submit"><span class="glyphicon glyphicon-search"></span></button>
+                        }
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+    <hr />
+    <footer style="background-color:pink">
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:-Little beauty
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

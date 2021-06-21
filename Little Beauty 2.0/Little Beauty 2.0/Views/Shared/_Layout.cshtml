@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Little Beauty</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top" style="background-color:pink">
+
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Little Beauty", "Index", "Home", new { area = "" }, new { @class = "navbar-brand", style = "color: black" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href='@Url.Action("prodCategoria","Catalogo",new {idCat=1})'>
+                           Cuidado del cabello
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href='@Url.Action("prodCategoria","Catalogo",new {idCat=2})'>
+                            Maquillaje
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href='@Url.Action("prodCategoria","Catalogo",new {idCat=1002})'>
+                            Cuidado de la piel
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href='@Url.Action("prodCategoria","Catalogo",new {idCat=1003})'>
+                            Uñas
+                        </a>
+
+                    </li>
+                    <li>
+                        @using (Html.BeginForm("BuscaProd", "Catalogo", FormMethod.Post, new { @class = "form-inline" }))
+                        {
+                            <input class="form-control mr-sm-2" type="text" id="nomBuscar" name="nomBuscar" placeholder="Buscar" />
+                            <button class="btn btn-default" style="border-color:pink;background-color:pink" type="submit" value="submit"><span class="glyphicon glyphicon-search"></span></button>
+                        }
+                    </li>
+                    
+                </ul>
+                @Html.Partial("_LoginPartial_1")
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+    <hr />
+    <footer style="background-color:pink">
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:-Little beauty
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
