@@ -1,0 +1,129 @@
+﻿@model Little_Beauty_2._0.Models.Productos
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutCompras.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio_compra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio_compra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio_venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio_venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ult_actualizacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ult_actualizacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imagen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imagen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apartamentos.nombre_apartamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apartamentos.nombre_apartamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categorias.nombre_categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categorias.nombre_categoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proveedores.nombre_proveedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proveedores.nombre_proveedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sub_categorias.nombre_sub_categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sub_categorias.nombre_sub_categoria)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

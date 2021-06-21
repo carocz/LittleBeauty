@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Little_Beauty_2._0.Models.Categorias>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutCompras.cshtml";
+}
+
+<div class="container body-content">
+    <h2 class="text-center" style="color:pink">Categorias</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre_categoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apartamentos.nombre_apartamento)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre_categoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apartamentos.nombre_apartamento)
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "Edit", new { id = item.id_categoria }, new { @class = "glyphicon glyphicon-pencil", @style = "color:palevioletred" }) |
+                    @Html.ActionLink(" ", "Details", new { id = item.id_categoria }, new { @class = "glyphicon glyphicon-file", @style = "color:palevioletred" }) |
+                    @Html.ActionLink(" ", "Delete", new { id = item.id_categoria }, new { @class = "glyphicon glyphicon-trash", @style = "color:palevioletred" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

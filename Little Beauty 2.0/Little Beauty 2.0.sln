@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1500
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Little Beauty 2.0", "Little Beauty 2.0\Little Beauty 2.0.csproj", "{91BE7F0C-5CAC-46C5-B58D-E2DDA6FE4CD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91BE7F0C-5CAC-46C5-B58D-E2DDA6FE4CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91BE7F0C-5CAC-46C5-B58D-E2DDA6FE4CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91BE7F0C-5CAC-46C5-B58D-E2DDA6FE4CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91BE7F0C-5CAC-46C5-B58D-E2DDA6FE4CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1678158D-DF81-4A33-8D26-2637D68E06AA}
+	EndGlobalSection
+EndGlobal

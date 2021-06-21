@@ -1,0 +1,35 @@
+﻿@model Little_Beauty_2._0.Models.Sub_categorias
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutCompras.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sub_categorias</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_sub_categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_sub_categoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categorias.nombre_categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categorias.nombre_categoria)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_sub_categoria }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,108 @@
+﻿@model IEnumerable<Little_Beauty_2._0.Models.Productos>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutCompras.cshtml";
+}
+
+<div class="container body-content">
+    <h2 class="text-center" style="color:pink">Productos</h2>
+    <p>
+        @Html.ActionLink("Crear nuevo", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Marca
+            </th>
+            <th>
+                Modelo
+            </th>
+            <th>
+                Descripcion
+            </th>
+            <th>
+                Costo
+            </th>
+            <th>
+                Venta
+            </th>
+            <th>
+                Fecha de act.
+            </th>
+            <th>
+                Imagen
+            </th>
+            <th>
+                Stock
+            </th>
+            <th>
+                Apartamento
+            </th>
+            <th>
+                Categoria
+            </th>
+            <th>
+                Proveedor
+            </th>
+            <th>
+                Sub-Categoria
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre_producto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.modelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.precio_compra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.precio_venta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ult_actualizacion)
+                </td>
+                <td>
+                    <img src="~/Content/img/@item.imagen " width="100px" height="100px"/>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.stock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apartamentos.nombre_apartamento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categorias.nombre_categoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Proveedores.nombre_proveedor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sub_categorias.nombre_sub_categoria)
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "Edit", new { id = item.id_producto }, new { @class = "glyphicon glyphicon-pencil", @style = "color:palevioletred" }) 
+                    @Html.ActionLink(" ", "Details", new { id = item.id_producto }, new { @class = "glyphicon glyphicon-file", @style = "color:palevioletred" }) 
+                    @Html.ActionLink(" ", "Delete", new { id = item.id_producto }, new { @class = "glyphicon glyphicon-trash", @style = "color:palevioletred" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

@@ -1,0 +1,37 @@
+﻿@model Little_Beauty_2._0.Models.Categorias
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutCompras.cshtml";
+}
+<div class="container body-content">
+    <h2 class="text-center" style="color:pink">Details</h2>
+    <div>
+        <h4 class="text-center">Categorias</h4>
+        <hr />
+        <div class="col-lg-offset-4 col-md-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.nombre_categoria)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.nombre_categoria)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Apartamentos.nombre_apartamento)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Apartamentos.nombre_apartamento)
+                </dd>
+
+            </dl>
+        </div>
+        <p class="text-center">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.id_categoria }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+    </div>

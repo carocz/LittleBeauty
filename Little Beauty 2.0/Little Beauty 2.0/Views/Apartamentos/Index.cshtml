@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Little_Beauty_2._0.Models.Apartamentos>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutCompras.cshtml";
+}
+<div class="container body-content">
+    <h2 class="text-center" style="color:pink">Inicio</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre_apartamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados.nombre_empleado)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre_apartamento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Empleados.nombre_empleado)
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "Edit", new { id = item.id_apartamento}, new { @class = "glyphicon glyphicon-pencil" ,@style= "color:palevioletred" }) |
+                    @Html.ActionLink(" ", "Details", new { id = item.id_apartamento }, new { @class = "glyphicon glyphicon-file", @style = "color:palevioletred" }) |
+                    @Html.ActionLink(" ", "Delete", new { id = item.id_apartamento }, new { @class = "glyphicon glyphicon-trash", @style = "color:palevioletred" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
