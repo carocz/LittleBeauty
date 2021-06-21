@@ -1,0 +1,30 @@
+﻿
+@using Little_Beauty_2._0.Models;
+@{
+    ViewBag.Title = "BuscaProd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container body-content">
+    <h3 style="color:pink">Lista de productos con nombre @ViewBag.SearchKey</h3>
+    <div class="text-center">
+        <table class="table">
+            <tr>
+                <th style="background-color:pink">Nombre</th>
+                <th style="background-color:pink">Foto</th>
+                <th style="background-color:pink">Precio</th>
+                <th style="background-color:pink">Comprar</th>
+            </tr>
+            @foreach (Productos producto in ViewBag.Listado)
+            {
+                <tr>
+                    <td>@producto.nombre_producto</td>
+                    <td> <img src="~/Content/img/@producto.imagen" width="100px"/> </td>
+                    <td>@producto.precio_venta</td>
+                    <td align="center">
+                        <a href="@Url.Action("Agregar","Carro",new { id= producto.id_producto })">Añadir al carrito</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
